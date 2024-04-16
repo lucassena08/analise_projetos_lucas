@@ -128,3 +128,27 @@ public static void main(String[] args) {
 ```
 
 > Analisando o projeto de `Componente de Geração de Certificados`: https://github.com/armentanoc/CertificateGenerator
+
+Assumindo o estado da aplicação no commit `ac6351d`
+
+O projeto está bem feito e com poucas alterações a serem feitas.
+
+Em `src.main.java.br.ucsal.certificateGenerator.presenstation.controllers` pode-se renomear o arquivo `listInfo.java` para
+`ListInfo.java` já que, por convenção, o nome de classes em `Java` começa com letra maiúscula.
+
+Além disso, parece ter havido uma tentativa de aplicar o padrão MVC, porém, sem haver clara implementação e separação de `Model` e `View`
+Portanto, para não haver intepretações erradas, pode-se renomear o pacote `controllers` para `actions` e mover `ListInfo.java` para um novo pacote `data`.
+
+Ficando da seguinte forma sua hierarquia
+
+```sh
+.
+├── actions
+│  ├── AlertMessage.java
+│  └── MouseDrag.java
+├── data
+│  └── ListInfo.java
+├── Login.java
+├── MailMan.java
+└── Main.java
+```
